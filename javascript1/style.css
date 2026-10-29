@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    
+}
+.container{
+
+width: 600px;
+height: 250px;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 4px 10px rgba(0, 0, 0,0.15);
+margin: 0px;
+}
+.container h1{
+    font-weight: 800;
+    font-size: 30px;
+}
+.container input{
+    width: 220px;
+    height: 30px;
+    padding: 2px;
+    margin-left: 30px;
+}
+.container button{
+    background-color: rgb(241, 255, 240);
+    margin-left: 90px;
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: gray;
+}

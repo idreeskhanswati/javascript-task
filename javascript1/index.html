@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+    <div class="container ">
+      <h1>AGE TO DAYS CONVERT</h1>
+      <input type="number" name="" id="age" placeholder="Enter your age"> <br>
+    <button id="convertBtn">CONVERT</button> 
+    <p id="result"></p>
+    </div>
+
+     <div class="container ">
+      <h1>HOURS TO SECOND CONVERT</h1>
+      <input type="number" name="" id="hours" placeholder="Enter Hours"> <br>
+    <button id="convertBt">CONVERT</button> 
+    <p id="check"></p>
+    </div>
+     <div class="container ">
+      <h1>FIND A NEXT NUMBER ARRAY</h1>
+      <input type="" name="" id="nextNum" placeholder="Enter a number"> <br>
+    <button id="convertBt1">CONVERT</button> 
+    <p id="checkNum"></p>
+    </div>
+     <div class="container ">
+      <h1>FIND A NEXT INTEGER OR FLOAT</h1>
+      <input type="" name="" id="nextNum1" placeholder="Enter a number integer or float"> <br>
+    <button id="convertBt2">CONVERT</button> 
+    <p id="checkNum1"></p>
+    </div>
+     <div class="container ">
+      <h1>FIRST LEETER OF NAME   CAPITALISED</h1>
+      <input type="" name="" id="changeNam" placeholder="Enter a Name"> <br>
+    <button id="convertBt3">CONVERT</button> 
+    <p id="checkNum2"></p>
+    </div>
+
+
+     <script >function convertYears (age){
+    return age * 365;
+}
+function calculator(){
+    let age = Number(document.getElementById("age").value);
+    let result = document.getElementById("result");
+
+    if (age < 0 ||document.getElementById("age").value === ""){
+        result.innerText = "Please Enter a Valid Age";
+    }
+    else{
+        let days =convertYears(age);
+        result.innerText = days + "days";
+    }
+}
+document.getElementById("convertBtn").addEventListener("click",calculator);
+
+
+function convertSeconds (hours){
+    return hours *3600;
+}
+function convert(){
+    let hours= Number(document.getElementById("hours").value);
+    let result = document.getElementById("result");
+    if (hours < 0 || document.getElementById("hours").value === ""){
+        check.innerText = "Please enter a positive number";
+    }
+    else{
+        let second = convertSeconds(hours);
+        check.innerText = second + "second";
+    }
+}
+ document.getElementById("convertBt").addEventListener("click",convert);
+
+
+let arr =[];
+for (let i=1; i<=100000; i++){
+  arr.push(i);
+}
+
+function findNext(){
+    let num = Number(document.getElementById("nextNum").value);
+    let index = arr.indexOf(num);
+    if (index == -1){
+        document.getElementById("checkNum").innerText = "Number not found";
+    }
+  else{
+        document.getElementById("checkNum").innerText = arr[index+1];
+    }
+
+}
+document.getElementById("convertBt1").addEventListener("click",findNext);
+
+function findInt (){
+    let num = Number(document.getElementById("nextNum1").value);
+
+    if (Number.isInteger("num")){
+        document.getElementById("checkNum1").innerText = num +1;
+    }else{
+        document.getElementById("checkNum1").innerText = (num + 0.1).toFixed(1);
+    }
+}
+document.getElementById("convertBt2").addEventListener("click",findInt);
+
+</script>
+    
+  </body>
+</html>
